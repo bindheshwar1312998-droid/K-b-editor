@@ -17,7 +17,9 @@ jobs:
           gradle-version: '8.9'
       - name: Unzip & Build APK
         run: |
-          unzip -o 
+          unzip -o           
+          cd KBEditor
+
           gradle assembleDebug --no-daemon
       - uses: actions/upload-artifact@v4
         with:
