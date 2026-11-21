@@ -1,22 +1,11 @@
 cmake_minimum_required(VERSION 3.22.1)
 project("kbeditor_native")
 
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/rnnoise/denoise.c")
-    file(GLOB RNNOISE_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/rnnoise/*.c")
-    list(FILTER RNNOISE_SRCS EXCLUDE REGEX ".*(dump_features|dump_weights_blob|dump_rnnoise_tables|rnnoise_demo|write_weights|test).*\\.c$")
-    add_library(kbeditor_native SHARED
-        kbeditor_native.cpp
-        ${RNNOISE_SRCS}
-    )
-    target_include_directories(kbeditor_native PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/rnnoise")
-    target_compile_definitions(kbeditor_native PRIVATE HAVE_RNNOISE=1)
-else()
-    add_library(kbeditor_native SHARED
-        kbeditor_native.cpp
-    )
-endif()
+add_library(kbeditor_native SHARED
+    kbeditor_native.cpp
+)
 
-target_compile_options(kbeditor_native PRIVATE -O3 -ffast-math)
+target_compile_options(kbeditor_native PRIVATE -O3)
 
 find_library(log-lib log)
 find_library(jnigraphics-lib jnigraphics)
