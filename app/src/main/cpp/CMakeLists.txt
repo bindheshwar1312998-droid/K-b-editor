@@ -3,7 +3,7 @@ project("kbeditor_native")
 
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/rnnoise/denoise.c")
     file(GLOB RNNOISE_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/rnnoise/*.c")
-    list(FILTER RNNOISE_SRCS EXCLUDE REGEX ".*(dump_weights_blob|rnnoise_demo|write_weights|test).*\\.c$")
+    list(FILTER RNNOISE_SRCS EXCLUDE REGEX ".*(dump_features|dump_weights_blob|dump_rnnoise_tables|rnnoise_demo|write_weights|test).*\\.c$")
     add_library(kbeditor_native SHARED
         kbeditor_native.cpp
         ${RNNOISE_SRCS}
