@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "869278776116",
+    "project_id": "k-b-editor",
+    "storage_bucket": "k-b-editor.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869278776116:android:7396325a904cee031e4361",
+        "android_client_info": {
+          "package_name": "com.aistudio.kbeditor.r7v4qx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7S8D9EVVeGKgfqj_VxKZ9CsxcHPmlNDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
