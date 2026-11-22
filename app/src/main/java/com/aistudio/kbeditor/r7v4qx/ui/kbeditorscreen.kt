@@ -1,3 +1,4 @@
+ ```kotlin
 package com.aistudio.kbeditor.r7v4qx.ui
 
 import com.aistudio.kbeditor.r7v4qx.model.MaskType
@@ -516,7 +517,6 @@ fun KbEditorScreen(vm: KbEditorViewModel = viewModel()) {
                         modifier = Modifier
                             .fillMaxWidth()
                             .weight(1f, fill = false)
-                            .verticalScroll(rememberScrollState())
                             .padding(horizontal = 16.dp, vertical = 6.dp)
                     ) {
                     when (state.activeSheet) {
@@ -895,3 +895,4 @@ private fun formatShortTime(ms: Long): String {
     val totalSec = (ms / 1000L).coerceAtLeast(0L)
     return "%02d:%02d".format(totalSec / 60L, totalSec % 60L)
 }
+```
