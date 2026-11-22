@@ -42,7 +42,8 @@ fun PipOverlaySheet(
 ) {
     var selectedBlend by remember { mutableStateOf(BlendModePreset.SCREEN) }
 
-    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+    Column(modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+
         Text("PiP Overlays & Blend Modes (Track O1)", style = MaterialTheme.typography.titleMedium, color = TextPrimary)
         Text("Blend Mode", style = MaterialTheme.typography.labelSmall, color = TextMuted)
 
