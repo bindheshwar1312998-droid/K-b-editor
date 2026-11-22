@@ -1,4 +1,4 @@
- ```kotlin
+ 
 package com.aistudio.kbeditor.r7v4qx.ui
 
 import com.aistudio.kbeditor.r7v4qx.model.MaskType
@@ -894,5 +894,4 @@ private fun TransportControlsBar(
 private fun formatShortTime(ms: Long): String {
     val totalSec = (ms / 1000L).coerceAtLeast(0L)
     return "%02d:%02d".format(totalSec / 60L, totalSec % 60L)
-}
-```
+
