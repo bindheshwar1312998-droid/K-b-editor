@@ -885,7 +885,7 @@ private fun TransportControlsBar(
                     contentDescription = "Import Video",
                     tint = Color.White,
                     modifier = Modifier.size(18.dp)
-                )
+                            )
             }
         }
     }
@@ -893,5 +893,6 @@ private fun TransportControlsBar(
 
 private fun formatShortTime(ms: Long): String {
     val totalSec = (ms / 1000L).coerceAtLeast(0L)
-    return "%02d:%02d".format(totalSec / 60L, totalSec % 60L)a
-) 
+    return "%02d:%02d".format(totalSec / 60L, totalSec % 60L)
+}
+
